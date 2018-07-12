@@ -51,7 +51,7 @@ var config = {
     tunnel: true,
     host: 'localhost',
     port: 3000,
-    logPrefix: "Frontend_Devil"
+    logPrefix: "Frontend"
 };
 
 gulp.task('html:build', function () {

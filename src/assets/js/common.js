@@ -7,10 +7,14 @@
         scroll();
 
         initPopupOnClassOpen();
-
+        styleInput();
         initMap();
     }
 
+
+    function styleInput() {
+        $('.js-custom-input').styler();
+    }
 
     function initPopupOnClassOpen() {
         $(".__swdOpenPopup").click(function () {
@@ -297,7 +301,9 @@
     $.fn.animated = function (advance) {
         if (!$(this).length) return;
 
-        var advance = advance || 200;
+        var heightScreen = screen.height;
+
+        var advance = advance || heightScreen * .5;
 
         if (window.pageYOffset + advance > $(this).offset().top) {
             var ths = $(this);
@@ -309,7 +315,8 @@
     $.fn.animatedQueue = function (hold, advance) {
         if (!$(this).length) return;
 
-        var advance = advance || 300,
+        var heightScreen = screen.height,
+            advance = advance || heightScreen * .5,
             hold = hold || 300;
 
         if (window.pageYOffset + advance > $(this).offset().top) {
@@ -328,7 +335,7 @@
     function addAnimation() {
         var heightScreen = screen.height;
 
-        $('.item__grid .item').animated(300);
+        $('.item__grid .item').animatedQueue(1000, heightScreen * .5);
     }
 
     function scroll() {
