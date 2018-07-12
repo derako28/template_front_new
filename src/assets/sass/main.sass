@@ -1,0 +1,102 @@
+@import "fonts"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  color: #666
+  opacity: 1
+
+*:-moz-placeholder
+  color: #666
+  opacity: 1
+
+*::-moz-placeholder
+  color: #666
+  opacity: 1
+
+*:-ms-input-placeholder
+  color: #666
+  opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html
+  overflow-x: hidden
+  display: flex
+  min-height: 100vh
+
+body
+  font-size: 16px
+  min-width: 320px
+  width: 100%
+  min-height: 100vh
+  position: relative
+  line-height: 1.5
+  font-family: $default-font
+  overflow-x: hidden
+  margin: 0
+  display: flex
+  flex-direction: column
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+a
+  text-decoration: none
+
+h1, h2, h3, h4, h5, h6, p, ul, ol
+  margin: 0
+  padding: 0
+
+button, html input[type="button"], input[type="reset"], input[type="submit"]
+  -webkit-appearance: button
+  cursor: pointer
+
+img
+  max-width: 100%
+
+
+.item__grid
+  display: flex
+  flex-wrap: wrap
+  max-width: 500px
+  margin: 200px 0
+
+.item
+  height: 100px
+  width: 100px
+  background: #000
+  margin: 20px
+  opacity: 0
+  transition: opacity .3s
+
+  &.animated
+    opacity: 1
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+#map
+  height: 400px
+
+@import "header"
+
+@import "footer"
+
