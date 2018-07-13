@@ -22,24 +22,24 @@ var path = {
         html: 'build/',
         js: 'build/assets/js/',
         css: 'build/assets/css/',
-        img: 'build/img/',
-        fonts: 'build/fonts/',
+        img: 'build/assets/img/',
+        fonts: 'build/assets/fonts/',
         libs: 'build/libs/'
     },
     src: { //Пути откуда брать исходники
         html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
         js: 'src/assets/js/**/*.js',//В стилях и скриптах нам понадобятся только main файлы
         style: 'src/assets/sass/**/*.sass',
-        img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
-        fonts: 'src/fonts/**/*.*',
+        img: 'src/assets/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        fonts: 'src/assets/fonts/**/*.*',
         libs: 'src/libs/**/*.*'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
         js: 'src/assets/js/**/*.js',
         style: 'src/assets/sass/**/*.sass',
-        img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*'
+        img: 'src/assets/img/**/*.*',
+        fonts: 'src/assets/fonts/**/*.*'
     },
     clean: './build'
 };
